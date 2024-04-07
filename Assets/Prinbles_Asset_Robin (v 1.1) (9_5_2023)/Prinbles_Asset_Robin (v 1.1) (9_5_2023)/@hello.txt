@@ -1,0 +1,24 @@
+
+ __   __          __        ___  __  
+|__) |__) | |\ | |__) |    |__  /__` 
+|    |  \ | | \| |__) |___ |___ .__/ 
+                                     
+           GAMEDEV STUFF             
+
+
+Hello!
+
+The webpage of this asset: https://prinbles.itch.io/robin
+More assets: https://prinbles.itch.io
+
+List of fonts used in the assets:
+
+Changa One Regular
+Bungee Regular
+
+Font download links: https://prinbles.itch.io/used-fonts
+
+
+The font is needed to properly display texts in vector files located in the "/asset/svg" folder.
+
+Good luck!
