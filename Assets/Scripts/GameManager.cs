@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
@@ -16,7 +17,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject _uIElements;
     [SerializeField] private Button _backButton;
     [SerializeField] private Button _pauseButton;
-    [SerializeField] private Canvas _gameOverPanel;
+    [SerializeField] private GameObject _gameOverPanel;
     [SerializeField] private Text _scoreText;
     private int _timeScale = 1;
     public int PlayerScore { private set; get; } = 0;
@@ -31,7 +32,7 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(Instance);
 
         _backButton.onClick.AddListener(OnBackButtonClicked);
-        _pauseButton.onClick.AddListener(onPauseButtonClicked);
+        _pauseButton.onClick.AddListener(OnPauseButtonClicked);
     }
 
     void Start()
@@ -51,11 +52,6 @@ public class GameManager : MonoBehaviour
         _scoreText.text = PlayerScore.ToString();
     }
 
-    public void RestartGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
     public void OpenScene(int SceneIndex)
     {
         SceneManager.LoadScene(SceneIndex);
@@ -64,7 +60,8 @@ public class GameManager : MonoBehaviour
 
     public void ShowGameOverPanel()
     {
-        Instantiate(_gameOverPanel);
+        var gameOverPanel = Instantiate(_gameOverPanel);
+        gameOverPanel.GetComponent<GameOverPanel>().SetHighScore();
     }
 
     private void OnBackButtonClicked()
@@ -72,9 +69,25 @@ public class GameManager : MonoBehaviour
         OpenScene((int) Scenes.HomeScene);
     }
 
-    private void onPauseButtonClicked()
+    private void OnPauseButtonClicked()
     {
         _timeScale = _timeScale == 0 ? 1 : 0;
         Time.timeScale = _timeScale;
+    }
+
+    public void ReserPlayerScore()
+    {
+        if (PlayerPrefs.GetInt(CurrentScene.ToString() + "HighScore", 0) < PlayerScore) 
+        {
+            PlayerPrefs.SetInt(CurrentScene.ToString() + "HighScore", PlayerScore);
+        }
+
+        _scoreText.text = PlayerScore.ToString();
+        PlayerScore = 0;
+    }
+
+    public int GetHighScore()
+    {
+        return PlayerPrefs.GetInt(CurrentScene.ToString() + "HighScore");
     }
 }

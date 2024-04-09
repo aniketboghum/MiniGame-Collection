@@ -37,7 +37,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.88267016}
   m_AnchorMax: {x: 0, y: 0.88267016}
   m_AnchoredPosition: {x: 87.50659, y: 105}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &8294209420220832058
 MonoBehaviour:
@@ -245,10 +245,10 @@ RectTransform:
   m_Father: {fileID: 6976626005568054384}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -981, y: 478}
-  m_SizeDelta: {x: 157.05, y: 182.3}
+  m_AnchorMin: {x: 0.17566669, y: 1}
+  m_AnchorMax: {x: 0.17566669, y: 1}
+  m_AnchoredPosition: {x: 30.5, y: -149}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8538509599537785390
 CanvasRenderer:
@@ -280,7 +280,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 100
+    m_FontSize: 72
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
@@ -368,7 +368,7 @@ MonoBehaviour:
   _uIElements: {fileID: 6141075375164893319}
   _backButton: {fileID: 6814234378127445141}
   _pauseButton: {fileID: 8302983349287421775}
-  _gameOverPanel: {fileID: 6271159956521137227, guid: 7522fe35900d91a4392bc881c3c02785, type: 3}
+  _gameOverPanel: {fileID: 2123090183705233036, guid: 7522fe35900d91a4392bc881c3c02785, type: 3}
   _scoreText: {fileID: 2923857216339994721}
 --- !u!114 &2496403147678716448
 MonoBehaviour:
@@ -421,10 +421,10 @@ RectTransform:
   m_Father: {fileID: 6976626005568054384}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0.8544133}
-  m_AnchorMax: {x: 1, y: 0.8544133}
-  m_AnchoredPosition: {x: -225, y: 31}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 1, y: 0.88267016}
+  m_AnchorMax: {x: 1, y: 0.88267016}
+  m_AnchoredPosition: {x: -104, y: -15}
+  m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &3971615477606784481
 CanvasRenderer:

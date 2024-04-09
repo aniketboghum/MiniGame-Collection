@@ -1,0 +1,8 @@
+Logs/
+Library/
+UIElementsSchema/
+UserSettings/
+zBuild/
+Temp/
+
+.vscode/

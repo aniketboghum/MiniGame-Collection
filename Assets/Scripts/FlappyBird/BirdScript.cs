@@ -19,8 +19,9 @@ public class BirdScript : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {   
+        // Destroy(GetComponent<Rigidbody2D>());
         GameManager.Instance.ShowGameOverPanel();
         isBirdAlive = false;
-        // GameManager.ReserPlayerScore();
+        GameManager.Instance.ReserPlayerScore();
     }
 }

@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 224374943613400473}
   - component: {fileID: 224374943613400423}
   - component: {fileID: 224374943613400422}
-  - component: {fileID: 224374943613400420}
   m_Layer: 5
   m_Name: GameOverPanel
   m_TagString: Untagged
@@ -78,18 +77,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &224374943613400420
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 224374943613400472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1636ed8e1cc5f1f4b9cc36294681fa19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &224374944115826002
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,9 +190,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 224374943613400420}
+      - m_Target: {fileID: 7071557297600564963}
         m_TargetAssemblyTypeName: GameOverPanel, Assembly-CSharp
-        m_MethodName: OnClickPlayAgainButton
+        m_MethodName: OnPlayAgainButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -584,6 +571,7 @@ GameObject:
   - component: {fileID: 6271159956521137227}
   - component: {fileID: 917425516167587508}
   - component: {fileID: 430041255799068199}
+  - component: {fileID: 7071557297600564963}
   m_Layer: 5
   m_Name: GameOverPanel
   m_TagString: Untagged
@@ -629,7 +617,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -673,3 +661,16 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &7071557297600564963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123090183705233036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1636ed8e1cc5f1f4b9cc36294681fa19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _highScoreText: {fileID: 224374944259039059}
