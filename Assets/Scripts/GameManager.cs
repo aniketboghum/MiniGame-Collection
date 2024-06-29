@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     {
         HomeScene = 0,
         FlappyBird = 1,
+        WhackAMole = 2
     }
 
     public static GameManager Instance { get; private set; }
@@ -19,7 +20,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Button _pauseButton;
     [SerializeField] private GameObject _gameOverPanel;
     [SerializeField] private Text _scoreText;
-    private int _timeScale = 1;
     public int PlayerScore { private set; get; } = 0;
 
     void Awake()
@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(Instance);
 
         _backButton.onClick.AddListener(OnBackButtonClicked);
-        _pauseButton.onClick.AddListener(OnPauseButtonClicked);
+        _pauseButton.onClick.AddListener(PauseGame);
     }
 
     void Start()
@@ -69,10 +69,9 @@ public class GameManager : MonoBehaviour
         OpenScene((int) Scenes.HomeScene);
     }
 
-    private void OnPauseButtonClicked()
+    public void PauseGame()
     {
-        _timeScale = _timeScale == 0 ? 1 : 0;
-        Time.timeScale = _timeScale;
+        Time.timeScale = Time.timeScale == 1 ? 0 : 1;
     }
 
     public void ReserPlayerScore()

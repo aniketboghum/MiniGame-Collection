@@ -62,9 +62,11 @@
     <Analyzer Include="C:\Users\anike\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.0.2\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\WhackAMole\Mole.cs" />
     <Compile Include="Assets\Scripts\FlappyBird\BirdScript.cs" />
     <Compile Include="Assets\Scripts\GameOverPanel.cs" />
     <Compile Include="Assets\Scripts\FlappyBird\ScoreIncreamentScript.cs" />
+    <Compile Include="Assets\Scripts\WhackAMole\MoleController.cs" />
     <Compile Include="Assets\Scripts\HomeScreenPlayButton.cs" />
     <Compile Include="Assets\Scripts\FlappyBird\PipeSpawner.cs" />
     <Compile Include="Assets\Scripts\FlappyBird\MovePipe.cs" />

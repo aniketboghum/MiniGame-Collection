@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FlappyBird.unity
     guid: 8994b6a104e92894ca0bd3e02d17af95
+  - enabled: 1
+    path: Assets/Scenes/WhackAMole.unity
+    guid: 6b4c099488610a64abe65470f433c5de
   m_configObjects: {}
