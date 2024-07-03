@@ -17,6 +17,8 @@ public class Mole : MonoBehaviour
     {
         _moleSpriteRenderer.sprite = _hitSprite;
         _animator.Play("anim1");
+        GameManager.Instance.IncrementPlayerScore(1);
+        GetComponent<BoxCollider2D>().enabled = false;
     }
 
     public void SetDefaultSprite()

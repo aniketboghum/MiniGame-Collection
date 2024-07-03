@@ -20,7 +20,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Button _pauseButton;
     [SerializeField] private GameObject _gameOverPanel;
     [SerializeField] private Text _scoreText;
-    public int PlayerScore { private set; get; } = 0;
+    public bool IsCurrentGamePaused { get; private set; } = false;
+    public int PlayerScore { get; private set; } = 0;
 
     void Awake()
     {
@@ -72,9 +73,10 @@ public class GameManager : MonoBehaviour
     public void PauseGame()
     {
         Time.timeScale = Time.timeScale == 1 ? 0 : 1;
+        IsCurrentGamePaused = !IsCurrentGamePaused;
     }
 
-    public void ReserPlayerScore()
+    public void ResetPlayerScore()
     {
         if (PlayerPrefs.GetInt(CurrentScene.ToString() + "HighScore", 0) < PlayerScore) 
         {

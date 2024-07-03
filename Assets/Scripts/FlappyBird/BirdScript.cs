@@ -22,6 +22,6 @@ public class BirdScript : MonoBehaviour
         // Destroy(GetComponent<Rigidbody2D>());
         GameManager.Instance.ShowGameOverPanel();
         IsBirdAlive = false;
-        GameManager.Instance.ReserPlayerScore();
+        GameManager.Instance.ResetPlayerScore();
     }
 }

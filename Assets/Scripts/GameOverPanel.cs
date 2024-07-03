@@ -11,6 +11,7 @@ public class GameOverPanel : MonoBehaviour
     public void OnPlayAgainButtonClicked()
     {
         GameManager.Instance.OpenScene((int) GameManager.CurrentScene);
+        GameManager.Instance.ResetPlayerScore();
     }
 
     public void SetHighScore()
