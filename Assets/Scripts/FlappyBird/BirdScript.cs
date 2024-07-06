@@ -11,7 +11,6 @@ public class BirdScript : MonoBehaviour
         _birdRigidBody = GetComponent<Rigidbody2D>();
     }
 
-
     void Update()
     {
         if (Input.GetMouseButtonDown(0) && IsBirdAlive)    _birdRigidBody.velocity = Vector2.up * _birdVelocityStrength;   

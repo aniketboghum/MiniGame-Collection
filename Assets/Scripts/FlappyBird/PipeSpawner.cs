@@ -6,10 +6,12 @@ public class PipeSpawner : MonoBehaviour
     [SerializeField] private float _spawnrate = 2;
     private float _timer = 0;
     [SerializeField] private float _heightOffset = 10;
+    
     void Start()
     {
         SpawnPipes();
     }
+
     void Update()
     {
         if (_timer < _spawnrate)
@@ -22,6 +24,7 @@ public class PipeSpawner : MonoBehaviour
             _timer = 0;
         }
     }
+    
     void SpawnPipes()
     {
         var lowPoint = transform.position.y - _heightOffset;

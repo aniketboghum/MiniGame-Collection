@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class MoleController : MonoBehaviour
 {
     [SerializeField] private GameObject[] _moles;
-
 #if UNITY_EDITOR
     [SerializeField] private float _gameTime =  5f;
 #else
@@ -50,8 +49,7 @@ public class MoleController : MonoBehaviour
                 GameManager.Instance.ResetPlayerScore();
                 GameManager.Instance.ShowGameOverPanel();
             }
-
-            
+                       
             yield return new WaitForSecondsRealtime(1);
         }
     }
